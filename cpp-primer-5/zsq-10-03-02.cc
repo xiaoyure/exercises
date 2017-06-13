@@ -12,7 +12,7 @@ void biggies(std::vector<std::string> &words,
             [sz](const std::string& str)
             { return str.size() >= sz; });
     auto count = words.end() - it;
-    std::cout << count << " word(s) of length " << sz << " or no longer " << std::endl;
+    std::cout << count << " word(s) with its length >= " << sz << std::endl;
     cpp5::output_container(it, words.end());
 }
 
@@ -28,7 +28,7 @@ void biggies_version2(std::vector<std::string> & words,
             [sz](const std::string& str)
             { return str.size() < sz; });
     auto count = words.end() - it;
-    std::cout << count << " word(s) of length " << sz << " or no longer " << std::endl;
+    std::cout << count << " word(s) with its length >= " << sz << std::endl;
     cpp5::output_container(it, words.end());
 }
 
