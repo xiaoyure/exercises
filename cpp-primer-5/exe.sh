@@ -8,11 +8,12 @@ if (( $? != 0 )); then
 fi
 
 echo
+echo -n '$ '
 
 if [ -f i${source}.txt ]; then
-    echo ./${source}.exe < i${source}.txt
-    ./${source}.exe < i${source}.txt
+    echo ./x${source}.exe < i${source}.txt
+    ./x${source}.exe < i${source}.txt
 else
-    echo ./${source}.exe
-    ./${source}.exe
+    echo ./x${source}.exe
+    ./x${source}.exe
 fi
