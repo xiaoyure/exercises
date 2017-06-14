@@ -53,6 +53,15 @@ namespace cpp5
                 [&charset, &dice](char c) { return charset[dice()]; });
         return result;
     }
+
+    template<class T> std::vector<T> step_vector(size_t length, T first, T step)
+    {
+        std::vector<int> result(length);
+        first -= step;
+        std::transform(result.begin(), result.end(), result.begin(),
+                [&first, step] (T x) { return first += step; });
+        return result;
+    }
 }
 
 #endif
