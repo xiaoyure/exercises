@@ -11,7 +11,7 @@ echo
 echo -n '$ '
 
 if [ -f i${source}.txt ]; then
-    echo ./x${source}.exe < i${source}.txt
+    echo "./x${source}.exe < i${source}.txt"
     ./x${source}.exe < i${source}.txt
 else
     echo ./x${source}.exe
